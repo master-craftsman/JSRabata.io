@@ -1,0 +1,24 @@
+{
+  "name": "playwrighttests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.9.1"
+  },
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "allure-playwright": "^2.9.2",
+    "playwright": "^1.39.0",
+    "playwright-extra": "^4.3.6"
+  },
+  "scripts": {
+    "test": "npx playwright test",
+    "ui": "npx playwright test --headed",
+    "debug": "npx playwright test --debug"
+  }
+}
