@@ -10,6 +10,7 @@ exports.MainPage = class MainPage {
         this.helpers = new Helpers();
         this.setTotalStorage = page.locator('#dataApiStoredInput');
         this.setMonthlyDownloadedData = page.locator('#dataApiStoredInput');
+        this.ShowedCalculadetData = page.locator('//p[@id=\"rabataMobileApi\"]')
 
     }
 
@@ -27,11 +28,9 @@ exports.MainPage = class MainPage {
         await expect(this.page).toHaveURL(/.*signup/);
     }
 
-    async setTotalStorage(){
+    async checkTotalStorage(){
         await this.setTotalStorage.fill('314');
-        // const calculatedValues = await this.helpers.Calculation(314)
-        // console.log(calculatedValues)
-        // await expect(this.page).toHaveTitle(/.*Sign up/);
+        await expect(this.ShowedCalculadetData).toBeVisible();
     }
 
 
